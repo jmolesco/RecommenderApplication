@@ -1,0 +1,11 @@
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\bin\Debug\netcoreapp2.1\APP_ADMIN.deps.json
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\bin\Debug\netcoreapp2.1\APP_ADMIN.runtimeconfig.json
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\bin\Debug\netcoreapp2.1\APP_ADMIN.runtimeconfig.dev.json
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\bin\Debug\netcoreapp2.1\APP_ADMIN.dll
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\obj\Debug\netcoreapp2.1\APP_ADMIN.csprojAssemblyReference.cache
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\obj\Debug\netcoreapp2.1\APP_ADMIN.csproj.CoreCompileInputs.cache
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\obj\Debug\netcoreapp2.1\APP_ADMIN.RazorAssemblyInfo.cache
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\obj\Debug\netcoreapp2.1\APP_ADMIN.RazorAssemblyInfo.cs
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\obj\Debug\netcoreapp2.1\APP_ADMIN.AssemblyInfoInputs.cache
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\obj\Debug\netcoreapp2.1\APP_ADMIN.AssemblyInfo.cs
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\APP_ADMIN\obj\Debug\netcoreapp2.1\APP_ADMIN.RazorTargetAssemblyInfo.cache

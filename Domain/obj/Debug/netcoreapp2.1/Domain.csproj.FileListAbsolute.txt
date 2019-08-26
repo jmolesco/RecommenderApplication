@@ -1,0 +1,8 @@
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\Domain\bin\Debug\netcoreapp2.1\Domain.deps.json
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\Domain\bin\Debug\netcoreapp2.1\Domain.dll
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfoInputs.cache
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\Domain\bin\Debug\netcoreapp2.1\Domain.runtimeconfig.json
+C:\Users\JM\Documents\Visual Studio 2017\Projects\RecommenderApplication\Domain\bin\Debug\netcoreapp2.1\Domain.runtimeconfig.dev.json
