@@ -1,0 +1,12 @@
+C:\Users\JM\Desktop\RecommenderApplication\Utility\obj\Debug\netcoreapp2.1\Utility.csprojAssemblyReference.cache
+C:\Users\JM\Desktop\RecommenderApplication\Utility\obj\Debug\netcoreapp2.1\Utility.csproj.CoreCompileInputs.cache
+C:\Users\JM\Desktop\RecommenderApplication\Utility\obj\Debug\netcoreapp2.1\Utility.AssemblyInfoInputs.cache
+C:\Users\JM\Desktop\RecommenderApplication\Utility\obj\Debug\netcoreapp2.1\Utility.AssemblyInfo.cs
+C:\Users\JM\Desktop\RecommenderApplication\Utility\bin\Debug\netcoreapp2.1\Utility.deps.json
+C:\Users\JM\Desktop\RecommenderApplication\Utility\bin\Debug\netcoreapp2.1\Utility.dll
+C:\Users\JM\Desktop\RecommenderApplication\Utility\bin\Debug\netcoreapp2.1\Utility.pdb
+C:\Users\JM\Desktop\RecommenderApplication\Utility\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\JM\Desktop\RecommenderApplication\Utility\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Localization.Abstractions.xml
+C:\Users\JM\Desktop\RecommenderApplication\Utility\obj\Debug\netcoreapp2.1\Utility.csproj.CopyComplete
+C:\Users\JM\Desktop\RecommenderApplication\Utility\obj\Debug\netcoreapp2.1\Utility.dll
+C:\Users\JM\Desktop\RecommenderApplication\Utility\obj\Debug\netcoreapp2.1\Utility.pdb
