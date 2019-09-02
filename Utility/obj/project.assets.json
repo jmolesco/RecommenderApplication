@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JM\\Documents\\Visual Studio 2017\\Projects\\RecommenderApplication\\Utility\\Utility.csproj",
+      "projectUniqueName": "C:\\Users\\JM\\Desktop\\RecommenderApplication\\Utility\\Utility.csproj",
       "projectName": "Utility",
-      "projectPath": "C:\\Users\\JM\\Documents\\Visual Studio 2017\\Projects\\RecommenderApplication\\Utility\\Utility.csproj",
+      "projectPath": "C:\\Users\\JM\\Desktop\\RecommenderApplication\\Utility\\Utility.csproj",
       "packagesPath": "C:\\Users\\JM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JM\\Documents\\Visual Studio 2017\\Projects\\RecommenderApplication\\Utility\\obj\\",
+      "outputPath": "C:\\Users\\JM\\Desktop\\RecommenderApplication\\Utility\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

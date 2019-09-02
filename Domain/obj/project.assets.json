@@ -3585,11 +3585,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JM\\Documents\\Visual Studio 2017\\Projects\\RecommenderApplication\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\JM\\Desktop\\RecommenderApplication\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\JM\\Documents\\Visual Studio 2017\\Projects\\RecommenderApplication\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\JM\\Desktop\\RecommenderApplication\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\JM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JM\\Documents\\Visual Studio 2017\\Projects\\RecommenderApplication\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\JM\\Desktop\\RecommenderApplication\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
