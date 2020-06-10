@@ -27,5 +27,7 @@ namespace Domain.School
         public string NationalCertificate { get; set; }
         //Foreign Key
         public int TrackCategoryID { get; set; }
+
+        public TrackCategory TrackCategory { get; set; } 
     }
 }

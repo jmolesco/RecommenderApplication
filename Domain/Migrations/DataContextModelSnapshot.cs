@@ -51,6 +51,8 @@ namespace Domain.Migrations
                         .IsRequired()
                         .HasMaxLength(255);
 
+                    b.Property<int>("SchoolType");
+
                     b.Property<bool>("Status");
 
                     b.Property<string>("StreetName");

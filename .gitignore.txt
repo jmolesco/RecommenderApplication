@@ -1,0 +1,2 @@
+vs/
+APP_ADMIN/bin

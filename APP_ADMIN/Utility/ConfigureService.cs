@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
 using Utility.EnvironmentSettings;
+using Services.Admin.School.Services;
+using Services.Admin.School.Implementation;
 
 namespace APP_ADMIN.Utility
 {
@@ -29,15 +31,18 @@ namespace APP_ADMIN.Utility
         public static void AddDefaultServices(this IServiceCollection services)
         {
 
+            services.AddScoped<ISchoolService, SchoolService>();
             services.AddAutoMapper(typeof(Startup));
             services.AddHttpContextAccessor();
 
         }
         public static void AddEnvironment(this IServiceCollection services, IConfiguration configuration)
         {
-            var appSettingsSection = configuration.GetSection("AppSettings");
+            var appSettingsSection = configuration.GetSection("AdminAppSettings");
             services.Configure<AdminAppSettings>(appSettingsSection);
 
+            var appSettings = configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettings);
 
             // put token here
         }

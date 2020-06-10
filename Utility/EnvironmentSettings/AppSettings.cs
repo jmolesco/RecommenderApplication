@@ -6,6 +6,6 @@ namespace Utility.EnvironmentSettings
 {
     public class AppSettings
     {
-
+        public int MaxRecordCount { get; set; }
     }
 }
