@@ -23,7 +23,8 @@ namespace Services.Admin.School.Services
 
 
         bool IsTrackExists(String TrackName);
-        
+        bool IsTrackExists(String TrackName, int trackID);
+
         #endregion
 
         #region STRAND
@@ -33,9 +34,10 @@ namespace Services.Admin.School.Services
         object GetAllStrand(int CurrentPage, string Keyword, EnumOrderBy? OrderByCriteria, EnumOrderType? OrderTypeCriteria,
            EnumFilterBy? FilterBy, EnumSchoolSearchBy? SearchBy, bool ShowAll, int MaxRecordPerPage);
 
-        StrandCategory GetStrandById(String strandName = null, int? strandCode = null);
+        object GetStrandById(String strandName = null, int? strandCode = null);
 
-        bool IsStrandExists(String TrackName);
+        bool IsStrandExists(String Strand);
+        bool IsStrandExists(String Strand, int id);
         #endregion
 
     }

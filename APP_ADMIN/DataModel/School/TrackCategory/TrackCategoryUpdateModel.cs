@@ -8,5 +8,11 @@ namespace APP_ADMIN.DataModel.TrackCategory.School
     public class TrackCategoryUpdateModel : TrackCategoryInsertModel
     {
         public int TrackCategoryID { get; set; }
+        public int Status { get; set; }
+        public TrackCategoryUpdateModel()
+        {
+            Status = 1;
+        }
+
     }
 }

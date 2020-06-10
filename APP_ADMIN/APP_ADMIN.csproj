@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Validator\School\StrandCategory\" />
+    <Folder Include="DataModel\School\SchoolCategory\" />
+    <Folder Include="Validator\School\SchoolCategory\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

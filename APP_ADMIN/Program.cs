@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain;
+using Domain.Seed;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,7 @@ namespace APP_ADMIN
                 try
                 {
                     var context = services.GetRequiredService<DataContext>();
+                    DBInitializeHelpers.CreateDefaultData(context);
                 }
                 catch (Exception ex)
                 {

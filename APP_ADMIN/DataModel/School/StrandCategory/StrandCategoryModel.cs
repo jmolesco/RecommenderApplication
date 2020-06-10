@@ -11,7 +11,7 @@ namespace APP_ADMIN.DataModel.School.StrandCategory
     public class StrandCategoryModel : Pager
     {
         public EnumOrderBy? OrderBy { get; set; }
-        public EnumSchoolSearchBy SearchBy { get; set; }
-        public EnumFilterBy FilterBy { get; set; }
+        public EnumSchoolSearchBy? SearchBy { get; set; }
+        public EnumFilterBy? FilterBy { get; set; }
     }
 }

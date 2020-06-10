@@ -31,5 +31,8 @@ namespace Domain.School
         public int ProvinceID { get; set; }
 
         public int CityMunicipalityID { get; set; }
+
+        public int SchoolType { get; set; }
+
     }
 }

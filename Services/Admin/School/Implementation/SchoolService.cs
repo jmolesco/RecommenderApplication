@@ -56,10 +56,18 @@ namespace Services.Admin.School.Implementation
                 try
                 {
                     var result = _trackRepository.Get(obj => obj.TrackCategoryID == model.TrackCategoryID);
-                    result.TrackCode = model.TrackCode;
-                    result.TrackName = model.TrackName;
-                    result.Status = isDelete;
-                    result.Description = model.Description;
+                    if(isDelete == false)
+                    {
+                        result.TrackCode = model.TrackCode;
+                        result.TrackName = model.TrackName;
+                        result.Status = model.Status;
+                        result.Description = model.Description;
+                    }
+                    else
+                    {
+                        result.TrackCategoryID = model.TrackCategoryID;
+                        result.Status = model.Status;
+                    }
                     _trackRepository.Update(result);
                     transaction.Commit();
                 }
@@ -188,7 +196,13 @@ namespace Services.Admin.School.Implementation
         public bool IsTrackExists(string TrackName)
         {
             var result = _trackRepository.Get(obj => obj.TrackName.Equals(TrackName));
-            return result!=null;
+            return result==null;
+        }
+
+        public bool IsTrackExists(string TrackName, int TrackID)
+        {
+            var result = _trackRepository.Get(obj => obj.TrackName.Equals(TrackName) && obj.TrackCategoryID !=TrackID);
+            return result == null;
         }
         #endregion
 
@@ -203,7 +217,7 @@ namespace Services.Admin.School.Implementation
                     _strandRepository.Insert(model);
                     transaction.Commit();
                 }
-                catch
+                catch(Exception err)
                 {
                     transaction.Rollback();
                 }
@@ -217,10 +231,20 @@ namespace Services.Admin.School.Implementation
                 try
                 {
                     var result = _strandRepository.Get(obj => obj.StrandCategoryID == model.StrandCategoryID);
-                    result.StrandCode = model.StrandCode;
-                    result.StrandName = model.StrandName;
-                    result.Status = isDelete;
-                    result.Description = model.Description;
+                  
+                    if (isDelete == false)
+                    {
+                        result.StrandCode = model.StrandCode;
+                        result.StrandName = model.StrandName;
+                        result.Status = model.Status; 
+                        result.Description = model.Description;
+                        result.TrackCategoryID = model.TrackCategoryID;
+                    }
+                    else
+                    {
+                        result.StrandCategoryID = model.StrandCategoryID;
+                        result.Status = model.Status;
+                    }
                     _strandRepository.Update(result);
                     transaction.Commit();
                 }
@@ -234,6 +258,7 @@ namespace Services.Admin.School.Implementation
             EnumFilterBy? FilterBy, EnumSchoolSearchBy? SearchBy, bool ShowAll, int MaxRecordPerPage)
         {
             var records = _strandRepository.Queryable().AsNoTracking().
+                Include(x=>x.TrackCategory).
                 Select(p => new {
                     p.StrandCategoryID,
                     p.StrandCode,
@@ -241,7 +266,9 @@ namespace Services.Admin.School.Implementation
                     p.Description,
                     p.Status,
                     p.DateCreated,
-                    p.DateModified
+                    p.DateModified,
+                    p.TrackCategoryID,
+                    p.TrackCategory.TrackName
                 });
 
             //Search
@@ -336,12 +363,36 @@ namespace Services.Admin.School.Implementation
             return response;
 
         }
-        public StrandCategory GetStrandById(String strandName = null, int? strandCode = null)
+        public object GetStrandById(String strandName = null, int? strandCode = null)
         {
-            var result = _strandRepository.Get(obj => obj.StrandName.Equals(strandName));
+            var result = _strandRepository.Queryable().AsNoTracking().
+                            Include(x => x.TrackCategory).
+                            Select(p => new {
+                                p.StrandCategoryID,
+                                p.StrandCode,
+                                p.StrandName,
+                                p.Description,
+                                p.Status,
+                                p.DateCreated,
+                                p.DateModified,
+                                p.TrackCategoryID,
+                                p.TrackCategory.TrackName
+                            }).Where(obj => obj.StrandName == strandName).FirstOrDefault();
             if (result == null)
             {
-                result = _strandRepository.Get(obj => obj.StrandCategoryID == strandCode);
+                result = _strandRepository.Queryable().AsNoTracking().
+                            Include(x => x.TrackCategory).
+                            Select(p => new {
+                                p.StrandCategoryID,
+                                p.StrandCode,
+                                p.StrandName,
+                                p.Description,
+                                p.Status,
+                                p.DateCreated,
+                                p.DateModified,
+                                p.TrackCategoryID,
+                                p.TrackCategory.TrackName
+                            }).Where(obj=>obj.StrandCategoryID == strandCode).FirstOrDefault();
             }
             return result;
         }
@@ -349,10 +400,14 @@ namespace Services.Admin.School.Implementation
         public bool IsStrandExists(string strandName)
         {
             var result = _strandRepository.Get(obj => obj.StrandName.Equals(strandName));
-            return result != null;
+            return result == null;
         }
 
-
+        public bool IsStrandExists(string strandName, int strandID)
+        {
+            var result = _strandRepository.Get(obj => obj.StrandName.Equals(strandName) && obj.StrandCategoryID != strandID);
+            return result == null;
+        }
         #endregion
     }
 }

@@ -11,7 +11,7 @@ namespace APP_ADMIN.DataModel.TrackCategory.School
     public class TrackCategoryModel : Pager
     {
         public EnumOrderBy? OrderBy { get; set; }
-        public EnumSchoolSearchBy SearchBy { get; set; }
-        public EnumFilterBy FilterBy { get; set; }
+        public EnumSchoolSearchBy? SearchBy { get; set; }
+        public EnumFilterBy? FilterBy { get; set; }
     }
 }

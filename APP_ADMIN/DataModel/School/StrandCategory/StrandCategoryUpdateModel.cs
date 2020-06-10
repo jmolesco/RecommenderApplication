@@ -8,5 +8,10 @@ namespace APP_ADMIN.DataModel.School.StrandCategory
     public class StrandCategoryUpdateModel : StrandCategoryInsertModel
     {
         public int StrandCategoryID { get; set; }
+        public int Status { get; set; }
+        public StrandCategoryUpdateModel()
+        {
+            Status = 1;
+        }
     }
 }

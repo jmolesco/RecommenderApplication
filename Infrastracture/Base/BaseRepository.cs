@@ -54,7 +54,7 @@ namespace Infrastracture.Base
                 }
                 entity.Status = status;
                 entity.DateCreated = DateTime.Now;
-                entity.DateModified = default(DateTime).DefaultSqlDateTime();
+                //entity.DateModified = default(DateTime).DefaultSqlDateTime();
                 entities.Add(entity);
                 context.SaveChanges();
             }

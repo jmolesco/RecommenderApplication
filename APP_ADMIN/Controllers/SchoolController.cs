@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using APP_ADMIN.DataModel.School;
 using APP_ADMIN.DataModel.School.StrandCategory;
+using APP_ADMIN.DataModel.School.TrackCategory;
 using APP_ADMIN.DataModel.TrackCategory.School;
 using AutoMapper;
 using Domain.School;
@@ -22,13 +23,13 @@ namespace APP_ADMIN.Controllers
     public class SchoolController : ControllerBase
     {
         private readonly ISchoolService _schoolService;
-        private readonly AdminAppSettings _adminSettings;
+        private readonly AppSettings appSettings;
         private readonly IHttpContextAccessor _httpContext;
         private readonly IHostingEnvironment _hostingEnvironment;
         private readonly IMapper _mapper;
         public SchoolController(ISchoolService schoolService,
              IHostingEnvironment hostingEnvironment,
-             IOptions<AdminAppSettings> adminSettings,
+             IOptions<AppSettings> _appSettings,
              IHttpContextAccessor httpContext,
              IMapper mapper
 
@@ -38,6 +39,7 @@ namespace APP_ADMIN.Controllers
             _hostingEnvironment = hostingEnvironment;
             _httpContext = httpContext;
             _mapper = mapper;
+            appSettings = _appSettings.Value;
         }
 
         #region TRACK
@@ -52,7 +54,7 @@ namespace APP_ADMIN.Controllers
             });
         }
 
-        [HttpPost("UpdateTrack")]
+        [HttpPut("UpdateTrack")]
         public IActionResult UpdateTrack([FromBody] TrackCategoryUpdateModel model)
         {
             var mappedTrack = _mapper.Map<TrackCategory>(model);
@@ -63,17 +65,28 @@ namespace APP_ADMIN.Controllers
             });
         }
 
-        [HttpGet("GetTrack")]
-        public IActionResult GetTrack([FromBody] TrackCategoryUpdateModel model)
+        [HttpPut("DeleteTrack")]
+        public IActionResult DeleteTrack([FromBody] TrackCategoryDeleteModel model)
         {
-            var result = _schoolService.GetTrackById(null,model.TrackCategoryID);
+            var mappedTrack = _mapper.Map<TrackCategory>(model);
+            _schoolService.UpdateTrack(mappedTrack, true);
+            return Ok(new
+            {
+                Status = StatusResponse.OK
+            });
+        }
+
+        [HttpGet("GetTrack")]
+        public IActionResult GetTrack([FromQuery] int id)
+        {
+            var result = _schoolService.GetTrackById(null,id);
             return Ok(result);
         }
 
         [HttpGet("GetAllTrack")]
-        public IActionResult GetAllTrack([FromBody] TrackCategoryModel model)
+        public IActionResult GetAllTrack([FromQuery] TrackCategoryModel model)
         {
-            var result = _schoolService.GetAllTrack(model.CurrentPage, model.Keyword, model.OrderBy, model.OrderType, model.FilterBy, model.SearchBy, model.ShowAll, _adminSettings.MaxRecordCount);
+            var result = _schoolService.GetAllTrack(model.CurrentPage, model.Keyword, model.OrderBy, model.OrderType, model.FilterBy, model.SearchBy, model.ShowAll, appSettings.MaxRecordCount);
             return Ok(result);
         }
         #endregion
@@ -91,7 +104,7 @@ namespace APP_ADMIN.Controllers
             });
         }
 
-        [HttpPost("UpdateStrand")]
+        [HttpPut("UpdateStrand")]
         public IActionResult UpdateStrand([FromBody] StrandCategoryUpdateModel model)
         {
             var mappedStrand = _mapper.Map<StrandCategory>(model);
@@ -102,17 +115,28 @@ namespace APP_ADMIN.Controllers
             });
         }
 
-        [HttpGet("GetStrand")]
-        public IActionResult GetStrand([FromBody] StrandCategoryUpdateModel model)
+        [HttpPut("DeleteStrand")]
+        public IActionResult DeleteStrand([FromBody] StrandCategoryDeleteModel model)
         {
-            var result = _schoolService.GetStrandById(null, model.StrandCategoryID);
+            var mappedStrand = _mapper.Map<StrandCategory>(model);
+            _schoolService.UpdateStrand(mappedStrand, true);
+            return Ok(new
+            {
+                Status = StatusResponse.OK
+            });
+        }
+
+        [HttpGet("GetStrand")]
+        public IActionResult GetStrand([FromQuery] int id)
+        {
+            var result = _schoolService.GetStrandById(null, id);
             return Ok(result);
         }
 
         [HttpGet("GetAllStrand")]
-        public IActionResult GetAllStrand([FromBody] StrandCategoryModel model)
+        public IActionResult GetAllStrand([FromQuery] StrandCategoryModel model)
         {
-            var result = _schoolService.GetAllStrand(model.CurrentPage, model.Keyword, model.OrderBy, model.OrderType, model.FilterBy, model.SearchBy, model.ShowAll, _adminSettings.MaxRecordCount);
+            var result = _schoolService.GetAllStrand(model.CurrentPage, model.Keyword, model.OrderBy, model.OrderType, model.FilterBy, model.SearchBy, model.ShowAll, appSettings.MaxRecordCount);
             return Ok(result);
         }
 
