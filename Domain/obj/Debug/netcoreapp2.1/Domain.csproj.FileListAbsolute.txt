@@ -27,3 +27,14 @@ C:\Users\81256687\Desktop\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\
 C:\Users\81256687\Desktop\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.dll
 C:\Users\81256687\Desktop\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.pdb
 C:\Users\81256687\Desktop\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\bin\Debug\netcoreapp2.1\Domain.deps.json
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\bin\Debug\netcoreapp2.1\Domain.runtimeconfig.json
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\bin\Debug\netcoreapp2.1\Domain.runtimeconfig.dev.json
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\bin\Debug\netcoreapp2.1\Domain.dll
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\bin\Debug\netcoreapp2.1\Domain.pdb
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.dll
+C:\Users\admin\Documents\GitHub\RecommenderApplication\Domain\obj\Debug\netcoreapp2.1\Domain.pdb
