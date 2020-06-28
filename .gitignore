@@ -1,0 +1,12 @@
+.vs/
+.APP_ADMIN/bin
+.APP_ADMIN/obj
+.vs/RecommenderApplication/DesignTimeBuild/.dtbcache
+.Domain/obj
+.Domain/bin
+.Infrastracture/obj
+.Infrastracture/bin
+.Services/obj
+.Services/bin
+.Utility/obj
+.Utility/bin

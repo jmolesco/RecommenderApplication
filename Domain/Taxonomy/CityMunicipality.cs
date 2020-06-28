@@ -29,5 +29,8 @@ namespace Domain.Taxonomy
         //Foreign Key
         public int RegionID { get; set; }
         public int ProvinceID { get; set; }
+
+        public Region Region { get; set; }
+        public Province Province { get; set; }
     }
 }
