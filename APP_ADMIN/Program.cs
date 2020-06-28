@@ -26,6 +26,7 @@ namespace APP_ADMIN
                 {
                     var context = services.GetRequiredService<DataContext>();
                     DBInitializeHelpers.CreateDefaultData(context);
+                    DBInitiializerSchoolRegion1_2.CreateDefaultData(context);
                 }
                 catch (Exception ex)
                 {

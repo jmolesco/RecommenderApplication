@@ -10,8 +10,7 @@ namespace Domain.Seed
         public  static void CreateDefaultData(DataContext dataContext)
         {
             dataContext.Database.EnsureCreated();
-            if (dataContext.School.Count() <= 0)
-                AddDefaultSchool(dataContext);
+            AddDefaultSchool(dataContext);
         }
 
         public static void AddDefaultSchool(DataContext dataContext)
@@ -721,7 +720,7 @@ namespace Domain.Seed
                 #endregion
 
             };
-
+            
         }
 
     }
